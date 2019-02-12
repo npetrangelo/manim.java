@@ -6,18 +6,18 @@ public class main {
 
     static class Dataclass extends Configurable {
         public String foo = "a";
-        public String abra = "cadabra";
+        public int num = 2;
 
         @Override
         public String toString() {
-            return String.format("%s %s", foo, abra);
+            return String.format("%s %d", foo, num);
         }
     }
 
     public static void main(String[] args) {
         Map<String, Object> config = Map.ofEntries(
                 entry("foo", "c"),
-                entry("abra", "kazam")
+                entry("num", 3)
         );
         Dataclass instance = new Dataclass();
         System.out.println(instance);
